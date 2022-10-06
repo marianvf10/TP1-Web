@@ -14,6 +14,11 @@
     color: var(--light);
     box-sizing: border-box;
 }
+.title {
+    display:flex;
+    align-items: center;
+    
+}
 
 .container {
       width: 100%;
@@ -130,5 +135,9 @@
 .text-price{
     color: var(--btn-color);
     font-weight: 700;
+}
+.ranking-list{
+    display: flex;
+    justify-content: space-around;
 }
 
