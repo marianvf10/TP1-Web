@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --main:#1C1A20;
+    --btn-color: #E58D28;
+    --light: #e7e7e7;
+    --font: 'Rubik', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    color: var(--light);
+    box-sizing: border-box;
+}
+
+.container {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--main);     
+}
+.header{
+ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-weight: 300;
+    transition: .5seg ease;
+}
+.nav-link:hover{
+    color: var(--btn-color);
+}
+.icon{  
+    font-size: 1.7rem;
+    margin-left: .4rem;
+    margin-right: .4rem;
+}
+
+.previous-link,
+.next-link{
+ display: flex;
+ align-items: center;
+}
+.tab-name{ 
+
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #565655;
+    border-top: 1px solid #565655;
+    padding: 1rem;
+}
+
+.tab-name-title{
+    font-weight: 300;
+    padding: 0 2;
+}
+.game-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 3rem;
+    min-height: calc(100vh - 62.67px - 80px);
+}
+
+.game-card {
+    width: 20rem;
+    height: 23rem;
+    background: rgb(241,77,77);
+    background: linear-gradient(180deg, rgba(241,77,77,1) 11%, rgba(255,136,0,1) 68%);
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    transition: all .3s;
+   }
+   
+   .game-card2 {
+    width: 19.80rem;
+    height: 22.80rem;
+    background-color: #1a1a1a;
+    transition: all .2s;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+   }
+   
+   .game-card2:hover {
+    transform: scale(0.98);
+    border-radius: 2
+   } 
+   .game-card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(252, 32, 3, 0.50);
+   } 
+   
+   .game-img {
+    width: 18rem;
+    height: 12rem;
+    border-radius: 1rem;
+  
+   }
+
+   .game-title {
+    font-weight: 300;
+   }
+
+   .month-name{
+    color: var(--main);
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: var(--btn-color);
+    padding: .6rem;
+   }
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-price{
+    color: var(--btn-color);
+    font-weight: 700;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr)) ;
+    gap: 2rem 2rem;
+    padding: 2rem;
+    margin: 0% 0% 10% 0%;
+}
+
+.card{
+    width: 20rem;
+    width: 20rem;
+    height: 45rem;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}

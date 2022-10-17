@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--A solucionar:
+Errores en responsive de busqueda:Achica la pantalla y abri los seleccionadores,se vera que quedan ocultas las opcines
+ atras de la busqueda
+
+Hacer reborde de los seleccionadores
+
+Hacer cruz de search acorde a nuestra web(naranja)
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link rel="stylesheet" href="CatalogoStyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- aca irian librerrias de fronted o iconos-->
+</head>
+
+<body>
+    <!-- todo lo que se ve va dentro del body-->
+    <div class="container">
+        <div class="header">
+            <div class="previous-link">
+                <i class="ri-arrow-left-line icon"></i>
+                <a class="nav-link" href="">Ofertas de hoy</a>
+
+            </div>
+            <div class="title">
+                <h1>GameStore</h1>
+
+            </div>
+            <div class="next-link">
+                <a class="nav-link" href="top.html">Top Juegos Mes</a>
+                <i class="ri-arrow-right-line icon"></i>
+
+            </div>
+        </div>
+        <article>
+            <div class="tab-name">
+                <div class="fondoBarraInfo">
+                    <ul class="barraInfo" onmouseleave="cerrarMenu(this)"
+                        onclick="desplegarMenu(this)">
+                        <li id = "elegido" class="barraInfo" style="display:block">De menor a mayor precio</li>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">De mayor a menor precio</li>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">De mas a menos antiguo</li>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">De menos a mas antiguo</li>
+                    </ul>
+                </div>
+
+                <div class="fondoBarraInfo">
+                    <input type="search" placeholder="Busqueda" class="barraInfo"></input>
+                </div>
+
+                <div class="fondoBarraInfo">
+                    <ul class="barraInfo" onmouseleave="cerrarMenu(this)" onclick="desplegarMenu(this)">
+                        <li id = "elegido" class="barraInfo" style="display:block">Sin genero</li>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">Terror</option>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">Deportes</li>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">Multijugador</li>
+                        <li class="barraInfo" style="display: none" onmouseover="prenderOpcion(this)" onmouseleave="apagarOpcion(this)" onclick="elegido(this)" onmousedown="prenderElegido(this)"onmouseup="apagarElegido(this)">Accion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section>
+                
+            </section>
+        </article>
+    </div>
+
+</body>
+
+<script>
+    function apagarElegido(elegido)
+    {
+        elegido.style.background = "linear-gradient(180deg, rgb(232, 100, 100) 11%, rgb(240, 155, 59) 68%)";
+    }
+</script>
+
+<script>
+    function apagarOpcion(elegido)
+    {
+        elegido.style.background = "#1C1A20";
+    }
+</script>
+
+<script>
+    function prenderElegido(elegido)
+    {
+        elegido.style.background = "linear-gradient(180deg, rgb(132, 222, 83) 11%, rgb(41, 172, 152) 68%)";
+        
+    }
+</script>
+
+<script>
+    function prenderOpcion(elegido){
+        elegido.style.background = "linear-gradient(180deg, rgb(232, 100, 100) 11%, rgb(240, 155, 59) 68%)" ;
+    }
+</script>
+
+<script>
+    function elegido(elegido) {
+        let primerHijo = elegido.parentElement.firstElementChild;
+        let elegidoInnerHTML = elegido.innerHTML;
+        
+        elegido.innerHTML = primerHijo.innerHTML;
+        primerHijo.innerHTML = elegidoInnerHTML;
+
+        cerrarMenu(elegido.parentElement);
+    }
+</script>
+
+<script>
+    function desplegarMenu(padre) {
+        let hijo;
+        //console.log(padre);
+        hijo = padre.children;
+
+        for (let i = 0; i < hijo.length; i++) {
+            //console.log(hijo[i]);
+            hijo[i].style.display = 'block';
+            //console.log(hijo[i]);
+        }
+    }
+</script>
+
+<script>
+    function cerrarMenu(padre) {
+        let hijo;
+        //console.log(padre);
+        hijo = padre.children;
+        for (let i = 1; i < hijo.length; i++) {
+            console.log(hijo[i]);
+                hijo[i].style.display = 'none';
+            console.log(hijo[i]);
+        }
+    }
+</script>
+
+</html>
