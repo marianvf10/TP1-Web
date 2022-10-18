@@ -1,0 +1,40 @@
+header{
+    background:linear-gradient(to bottom,rgb(163, 163, 216),rgb(255, 255, 255));
+    margin-bottom: 50px;
+
+    height: 90px;
+}
+
+h1{
+    color: rgb(82, 43, 116);
+    font-size: 38px;
+
+    -webkit-text-stroke: 0.6px black ;
+
+    text-align: center;
+
+    position: relative;
+    top:15px;
+}
+
+p{
+    text-align: center;
+}
+
+#prelista{
+    border-color: rgb(145, 153, 160);
+    border-style:groove ;
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px rgb(48, 35, 59);
+    
+    background-color: rgb(195, 195, 218);
+}
+
+#numero{
+    width: 200px;
+    text-align: center;
+}
+
+#enviar{
+    width: 200px;
+}

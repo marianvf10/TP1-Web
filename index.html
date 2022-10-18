@@ -1,83 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- aca irian librerrias de fronted o iconos-->
+    <!--Link a bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Tributo a Chris Cornell</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-<!-- todo lo que se ve va dentro del body-->  
-     <div class="container">
-        <div class="header">
-            <div class="previous-link">
-                <i class="ri-arrow-left-line icon"></i>
-                <a class="nav-link" href="">Ofertas de hoy</a>
+    <header class="barra">
+        <div class="container">
+            <div class="row">
+                <nav style="display: none;">
+                    <div class="col">
+                        <button>Una voz sobrehumana</button>
+                    </div>
+                    <div class="col">
+                        <button>Recorriendo su carrera</button>
+                    </div>
+                </nav>
+                
+                <!--Titulo y subtitulo de la web.-->
+                <h1 class="centrado">Tributo a Chris Cornell</h1>
+                <h2 class="centrado">La historia de una leyenda</h2>
+            </div>
+           
+        </div>      
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <article>
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <h3>¿Quien es Chris Cornell?</h3>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-5">
+                                    <div width="300">
+                                        <img src="imgs/CCArticle1.jpg"  width="320" id="imgActual">
+                                    </div>
+                                    <button onclick="intercambioImg()">
+                                        Cambiar foto
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <p>
+                                        <br /><br />
+                                        Chris Cornell fue un cantante,guitarrista y compositor,mayormente conocido por
+                                        su rol de vocalista en las bandas Soundgarden,Temple of the Dog y Audioslave.
+                                        Es considerado una de las mejores voces en la historia de la Rock y ,junto a
+                                        Soundgarden,uno de los precursores del movimiento Grunge.
+                                        <br /><br />
+                                        Durante casi 30 años de carrera,su interpretaciones vocales agresivas,pero a la
+                                        vez melancolicas,fascinaron
+                                        a millones de personas alrededor mundo,y lo sigue haciendo a dia de hoy,a ya 4
+                                        años de su muerte.
+                                    </p>
+                                    <p id="granFrase">
+                                        <br />
+                                        "No one sings like you anymore"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
             </div>
-            <div class="title">
-                <h1>GameStore</h1>
+            </article>
 
-            </div>
-            <div class="next-link">
-                <a class = "nav-link"href="top.html">Top Juegos Mes</a>
-                <i class="ri-arrow-right-line icon"></i>
+            <div class="col-2">
+                <aside>
+                    <h4>Temas que no te podes perder</h4>
+                    <ul>
 
+                        <li>
+                            <button onclick="activarAudio(document.getElementById('soundgarden'))" class="audioButton">
+                                <!--Debo hacer que el boton ejecute el audio-->
+                                "Black Hole Sun" <br> Soundgarden
+                                <audio src="audios/soundgarden-black-hole-sun-hq.mp3" id="soundgarden">Archivo no
+                                    disponible</audio>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button onclick="activarAudio(document.getElementById('templeDog'))" class="audioButton">
+                                <!--Debo hacer que el boton ejecute el audio-->
+                                "Say Hello 2 Heaven" <br> Temple of the Dog
+                                <audio src="audios/say-hello-2-heaven.mp3" id="templeDog">Archivo no disponible</audio>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button onclick="activarAudio(document.getElementById('audioslave'))" class="audioButton">
+                                <!--Debo hacer que el boton ejecute el audio-->
+                                "Show Me How To Live" <br> Audioslave
+                                <audio src="audios/02 - Show Me How to Live.mp3" id="audioslave">Archivo no
+                                    disponible</audio>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="audioB" id="pause" onclick="pausar()">
+                                Pausar
+                            </button>
+                        </li>
+                    </ul>
+                </aside>
             </div>
         </div>
-        <div class = "tab-name">
-            <h2 class = "tab-name-title">Proximos Estrenos</h2>
-        </div>
-        <div class = game-container>
-            <div class="game-card">
-                <div class="game-card2">
-                    <img class = "game-img" src="img/gtavjpg.jpg" alt="">
-                    <div class="description">
-                        <h2 class = "game-title">GTA V</h2>
-                        <div class = "price">
-                            <p>PS5</p>
-                            <p class = "text-price">$ 80</p>
-                        </div>
-                    </div>
-                    <button class = "month-name">Octubre</button>
-                </div>
-              </div>
-              <div class="game-card">
-                <div class="game-card2">
-                    <img class = "game-img" src="img/mbapep.jpg"">
-                    <div class="description">
-                        <h2 class = "game-title">FIFA 23</h2>
-                        <div class = "price">
-                            <p>PS5</p>
-                            <p class = "text-price">$ 80</p>
-                        </div>
-                    </div>
-                    <button class = "month-name">Noviembre</button>
-                </div>
-              </div>
-              <div class="game-card">
-                <div class="game-card2">
-                    <img class ="game-img" src="/img/redead.jpg" alt="">
-                    <div class = "description">
-                        <h2 class = "game-title">Red Dead Redemption 2</h2>
-                        <div class = "price">
-                            <p>PS5</p>
-                            <p class = "text-price">$ 80</p>
-                        </div>
-                    </div>
-                    <button class = "month-name">Diciembre</button>
-                </div>
-              </div>
-        </div>
+
 
     </div>
+    </div>
+
+    <article>
+        <section>
+            <h3>Sus origenes en la musica</h3>
+            <p>
+                Chris Cornell nacio un 20 de Julio de 1964, en la ciudad de Seattle,muy conocida por ser
+                la cuna del Grunge.A sus catorce anios,comenzo a introducirse en la musica, buscando una
+                escapatoria a una fuerte depresion que fue causada a raiz del divorcio de sus padres.
+                Durante ese tiempo,Cornell aprendio a tocar la bateria y la guitarra.
+
+                No se hizo tardar en llegar su primer proyecto musical: The Jones Street Band,en la
+                interpretaban
+                covers de Rush, AC/DC, Sex Pistols y Ramones.En esta banda,fue cuando Cornell se introdujo
+                por
+                primera
+                vez en la labor de vocalista.En el anio 1982, Cornell se mudo de la casa de sus padres,
+                decision
+                que
+                dio
+                lugar a que se uniera a una nueva banda,The Shemps,donde se forjo fuertes lazos con el
+                bajista
+                Hiro
+                Yamamoto.
+                Tras la ruptura de la banda en 1984,Cornell y Yamamoto decidieron forjar una nueva banda,y
+                asi,junto
+                a Kim Thayil
+                en la guitarra,se forma la gloriosa Soundgarden.
+            </p>
+        </section>
+    </article>
+
+    <footer class="barra">
+        <!--Link de acceso a redes sociales-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button>
+                        <a href="https://www.instagram.com/chriscornellofficial/?hl=es-la" target="_blank">
+                            Instagram
+                        </a>
+                    </button>
+                </div>
+                <div class="col">
+                    <button>
+                        <a href="https://www.facebook.com/chriscornell/" target="_blank">
+                            Facebook
+                        </a>
+                    </button>
+                </div>
+                <div class="col">
+                    <button >
+                        <a href="https://open.spotify.com/artist/0XHiH53dHrvbwfjYM7en7I" target="_blank">
+                            Spotify
+                        </a>
+                    </button>
+                </div>
+                <div class="col">
+                    <button>
+                        <a href="https://www.youtube.com/channel/UCf0pcytyiYVYy3UOs52nsQg" target="_blank">
+                            Youtube
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const intercambioImg = () => {
+            let img1 = document.getElementById('imgActual');
+            let img2 = document.getElementById('invImg1');
+            let img3 = document.getElementById('invImg2');
+            let img4 = document.getElementById('invImg3');
+            let img5 = document.getElementById('invImg4')
+            let auxSrc = img1.src;
+
+            img1.src = img2.src;
+            img2.src = img3.src;
+            img3.src = img4.src;
+            img4.src = img5.src;
+            img5.src = auxSrc;
+        }
+    </script>
+
+    <script>
+        const activarAudio = (audio) => {
+            
+            pausar();
+            
+            audio.play();
+        }
+    </script>
     
+    <script>
+        const pausar = () =>{
+            document.getElementById('soundgarden').pause();
+            document.getElementById('audioslave').pause();
+            document.getElementById('templeDog').pause();
+            document.getElementById('soundgarden').currentTime = 0;
+            document.getElementById('audioslave').currentTime = 0;
+            document.getElementById('templeDog').currentTime = 0;
+        }
+    </script>
 </body>
 
+<img src="imgs/CCArticle2.jpg" id="invImg1" class="invImg">
+<img src="imgs/CCArticle3.jpg" id="invImg2" class="invImg">
+<img src="imgs/CCArticle4.jpg" id="invImg3" class="invImg">
+<img src="imgs/CCArticle5.jpg" id="invImg4" class="invImg">
 
-
-</html>
+</body>
