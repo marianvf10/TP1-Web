@@ -22,6 +22,11 @@ Hacer cruz de search acorde a nuestra web(naranja)
 </head>
 
 <body>
+    <header>
+
+    </header>
+
+
     <!-- todo lo que se ve va dentro del body-->
     <div class="container">
         <div class="header">
@@ -67,13 +72,15 @@ Hacer cruz de search acorde a nuestra web(naranja)
                 </div>
             </div>
 
-            <section>
-                
+            <section class="grid">
+
             </section>
         </article>
     </div>
 
 </body>
+
+<script type="module" src="CatalogoCodigo.js"></script>
 
 <script>
     function apagarElegido(elegido)
@@ -107,7 +114,7 @@ Hacer cruz de search acorde a nuestra web(naranja)
     function elegido(elegido) {
         let primerHijo = elegido.parentElement.firstElementChild;
         let elegidoInnerHTML = elegido.innerHTML;
-        
+        //innerHTML y outerHTML
         elegido.innerHTML = primerHijo.innerHTML;
         primerHijo.innerHTML = elegidoInnerHTML;
 
