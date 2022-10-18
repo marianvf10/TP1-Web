@@ -156,7 +156,7 @@
     width: 240px;
     height: 180px;
     border-radius: 10px;
-    padding: 2.5px;
+    padding: 4.5px;
 }
 
 .barraInfo{
@@ -170,4 +170,14 @@
     text-align: center;
         list-style-type: none;
     font-size:15px;
+}
+
+.videojuego{
+    background: #1C1A20;
+}
+
+.imagenVideojuego{
+    width: 230px;
+    height: 120px;
+    border-radius: 10px;
 }

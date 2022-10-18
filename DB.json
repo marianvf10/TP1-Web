@@ -6,8 +6,8 @@
                         "consola":"PS4",
                         "precio":60,
                         "genero":["accion","multijugador"],
-                        "descripcion":"Cuando un joven estafador callejero, un ladrón de bancos retirado y un psicópata aterrador se ven involucrados con lo peor y más desquiciado del mundo criminal, del gobierno de los EE. UU. y de la industria del espectáculo, tendrán que llevar a cabo una serie de peligrosos golpes para sobrevivir en una ciudad implacable en la que no pueden confiar en nadie. Y mucho menos los unos en los otros."
-                        
+                        "descripcion":"Cuando un joven estafador callejero, un ladrón de bancos retirado y un psicópata aterrador se ven involucrados con lo peor y más desquiciado del mundo criminal, del gobierno de los EE. UU. y de la industria del espectáculo, tendrán que llevar a cabo una serie de peligrosos golpes para sobrevivir en una ciudad implacable en la que no pueden confiar en nadie. Y mucho menos los unos en los otros.",
+                        "imagen": "img/gtavjpg.jpg"
                     },
                     {
                         "id":2,
@@ -15,7 +15,8 @@
                         "consola":"PS4",
                         "precio":50,
                         "genero":["deportes","multijugador"],
-                        "descripcion":"Juega al deporte rey con más de 17,000 jugadores, más de 700 equipos en más de 90 estadios y más de 30 ligas de todo el mundo."
+                        "descripcion":"Juega al deporte rey con más de 17,000 jugadores, más de 700 equipos en más de 90 estadios y más de 30 ligas de todo el mundo.",
+                        "imagen": "img/mbapep.jpg"
                     },
                     {
                         "id":3,
@@ -23,7 +24,8 @@
                         "consola":"PC",
                         "precio":15,
                         "genero":["terror"],
-                        "descripcion":"El infierno es un experimento al que no puedes sobrevivir en Outlast, un juego de terror y supervivencia en primera persona desarrollado por veteranos de algunas de las franquicias de juegos más importantes de la historia. En el papel del periodista de investigación Miles Upshur, explora Mount Massive Asylum e intenta sobrevivir el tiempo suficiente para descubrir su terrible secreto... si te atreves."
+                        "descripcion":"El infierno es un experimento al que no puedes sobrevivir en Outlast, un juego de terror y supervivencia en primera persona desarrollado por veteranos de algunas de las franquicias de juegos más importantes de la historia. En el papel del periodista de investigación Miles Upshur, explora Mount Massive Asylum e intenta sobrevivir el tiempo suficiente para descubrir su terrible secreto... si te atreves.",
+                        "imagen": "img/outlast.jpg"
                     },
                     {
                         "id":4,
@@ -31,7 +33,8 @@
                         "consola":"PC",
                         "precio":30,
                         "genero":["terror","accion"],
-                        "descripcion":"Un virus mortal envuelve a los residentes de Raccoon City en septiembre de 1998, sumiendo a la ciudad en el caos mientras zombis carnívoros deambulan por las calles en busca de sobrevivientes. Te esperan un subidón de adrenalina sin igual, una historia apasionante y horrores inimaginables. Sé testigo del regreso de Resident Evil 2."
+                        "descripcion":"Un virus mortal envuelve a los residentes de Raccoon City en septiembre de 1998, sumiendo a la ciudad en el caos mientras zombis carnívoros deambulan por las calles en busca de sobrevivientes. Te esperan un subidón de adrenalina sin igual, una historia apasionante y horrores inimaginables. Sé testigo del regreso de Resident Evil 2.",
+                        "imagen": "img/residentevil2.jpg"
                     },
                     {
                         "id":5,
@@ -39,7 +42,8 @@
                         "consola":"PS4",
                         "genero":["deportes","multijugador"],
                         "precio":60,
-                        "descripcion":"En UFC 4, un videojuego de deportes a cargo de EA Vancouver y Electronic Arts para PlayStation 4 y Xbox One, tu progreso como combatiente se define por tus logros, tu personalidad y tu estilo de combate. Desarrolla y personaliza tu personaje a través de un sistema de progreso unificado en todos los modos."
+                        "descripcion":"En UFC 4, un videojuego de deportes a cargo de EA Vancouver y Electronic Arts para PlayStation 4 y Xbox One, tu progreso como combatiente se define por tus logros, tu personalidad y tu estilo de combate. Desarrolla y personaliza tu personaje a través de un sistema de progreso unificado en todos los modos.",
+                        "imagen": "img/ufc4.jpg"
                     },
                     {
                         "id":6,
@@ -47,15 +51,17 @@
                         "consola":"PC",
                         "precio":"40",
                         "genero":["terror","multijugador"],
-                        "descripcion":"Dead by Daylight es un juego de terror multijugador (4vs1) en el que un jugador asume el papel del Asesino salvaje y los otros cuatro jugadores juegan como Supervivientes, tratando de escapar del Asesino y evitar que los atrapen y los maten."
+                        "descripcion":"Dead by Daylight es un juego de terror multijugador (4vs1) en el que un jugador asume el papel del Asesino salvaje y los otros cuatro jugadores juegan como Supervivientes, tratando de escapar del Asesino y evitar que los atrapen y los maten.",
+                        "imagen": "img/deadbydaylight.jpg"
                     },
                     {
                         "id":7,
-                        "nombre":"Call of Duty Black Ops III",
+                        "nombre":"Call of Duty Black Ops 3",
                         "consola":"PC",
                         "precio":"40",
                         "genero":["accion","multijugador"],
-                        "descripcion":"Bienvenido a 2065. Una nueva clase de soldados de operaciones encubiertas surge mientras que la línea que separa a la humanidad de la alta tecnología robótica propia de los conflictos armados se vuelve difusa."
+                        "descripcion":"Bienvenido a 2065. Una nueva clase de soldados de operaciones encubiertas surge mientras que la línea que separa a la humanidad de la alta tecnología robótica propia de los conflictos armados se vuelve difusa.",
+                        "imagen": "img/callofdutyblackops3.jpg"
                     },
                     {
                         "id":8,
@@ -63,7 +69,8 @@
                         "consola":"PS4",
                         "precio":"30",
                         "genero":["accion","terror","multijugador"],
-                        "descripcion":"En un mundo hostil y pospandémico, las circunstancias desesperadas acaban juntando a Ellie y a Joel, que deben confiar el uno en el otro para sobrevivir en un viaje brutal por lo que queda de Estados Unidos."
+                        "descripcion":"En un mundo hostil y pospandémico, las circunstancias desesperadas acaban juntando a Ellie y a Joel, que deben confiar el uno en el otro para sobrevivir en un viaje brutal por lo que queda de Estados Unidos.",
+                        "imagen": "img/thelastofus.jpg"
                     },
                     {
                         "id":9,
@@ -71,7 +78,8 @@
                         "consola":"PS4",
                         "precio":"60",
                         "genero":["accion","terror"],
-                        "descripcion":"Cinco años más tarde...Después de un peligroso viaje por un Estados Unidos postapocalíptico, Ellie y Joel se asientan en Wyoming.La vida en una próspera comunidad les proporciona estabilidad, a pesar de la amenaza de los infectados y los supervivientes desesperados.Tras un hecho violento que altera la paz, Ellie comienza un viaje en busca de justicia. Al dar caza a los responsables, afronta las terribles repercusiones físicas y emocionales de sus actos."
+                        "descripcion":"Cinco años más tarde...Después de un peligroso viaje por un Estados Unidos postapocalíptico, Ellie y Joel se asientan en Wyoming.La vida en una próspera comunidad les proporciona estabilidad, a pesar de la amenaza de los infectados y los supervivientes desesperados.Tras un hecho violento que altera la paz, Ellie comienza un viaje en busca de justicia. Al dar caza a los responsables, afronta las terribles repercusiones físicas y emocionales de sus actos.",
+                        "imagen": "img/thelastofus2.jpg"
                     },
                     {
                         "id":10,
@@ -79,7 +87,8 @@
                         "consola":"PS4",
                         "precio":"40",
                         "genero":["accion","multijugador"],
-                        "descripcion":"América, 1899. Arthur Morgan y la banda de Van der Linde se ven obligados a huir. Con agentes federales y los mejores cazarrecompensas de la nación pisándoles los talones, la banda deberá atracar, robar y luchar, para sobrevivir en su camino por el escabroso territorio del corazón de América. Mientras las divisiones internas aumentan y amenazan con separarlos a todos, Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer."
+                        "descripcion":"América, 1899. Arthur Morgan y la banda de Van der Linde se ven obligados a huir. Con agentes federales y los mejores cazarrecompensas de la nación pisándoles los talones, la banda deberá atracar, robar y luchar, para sobrevivir en su camino por el escabroso territorio del corazón de América. Mientras las divisiones internas aumentan y amenazan con separarlos a todos, Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.",
+                        "imagen": "img/redead.jpg"
                     }
                 ],
     "proximoEstreno":[
