@@ -1,11 +1,11 @@
-import DB from './DB.json' assert {type:'json'};
+import DB from '../DB.json' assert {type:'json'};
 
 //Metodos para mostrar proximos estrenos
 function mostrarProximosEstrenos()
 {
     let planilla = document.querySelector("div.game-container");
     let fragmento = document.createDocumentFragment();
-    let fondoVideojuego,panelVideojuego,imagen,titulo,infoBasica;
+    let fondoVideojuego,panelVideojuego,imagen,titulo,mesEstreno,infoBasica;
     
     for(let itr = 0;itr<3;itr++)
     {
@@ -13,11 +13,13 @@ function mostrarProximosEstrenos()
         panelVideojuego = generarPanelVideojuego();
         imagen = generarImagen(itr);
         titulo = generarTitulo(itr);
+        mesEstreno = generarMesEstreno(itr);
         infoBasica = generarInfoBasica(itr);
 
         fondoVideojuego.appendChild(panelVideojuego);
         panelVideojuego.appendChild(imagen);
         panelVideojuego.appendChild(titulo);
+        panelVideojuego.appendChild(mesEstreno);
         panelVideojuego.appendChild(infoBasica);
         
         fragmento.appendChild(fondoVideojuego);
@@ -64,9 +66,17 @@ function generarTitulo(posc)
     return titulo;
 }
 
+function generarMesEstreno(posc)
+{
+    let mesEstreno = document.createElement('p');
+    mesEstreno.appendChild(document.createTextNode(proximoEstreno[posc].estreno[1]))
+
+    return mesEstreno;
+}
+
 function generarInfoBasica(posc)
 {
-    let consola,precio,infoBasica;
+    let consola,precio,infoBasica,mesEstreno;
     consola = document.createElement('p');
     consola.appendChild(document.createTextNode(proximoEstreno[posc].consola));
     precio = document.createElement('p');
@@ -80,7 +90,7 @@ function generarInfoBasica(posc)
 }
 
 //Main
-const proximoEstreno = DB.videojuego;
+const proximoEstreno = DB.proximoEstreno;
 
 console.log('a');
 mostrarProximosEstrenos();
