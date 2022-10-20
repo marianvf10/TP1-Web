@@ -48,7 +48,7 @@ function generarInfoBasica(posc) {
     return infoBasica;
 }
 
-function mostrarCatalogo(posc) {
+function mostrarCatalogo(catalogo,posc) {
     let planilla = document.querySelector('.grid');
     let fragmento = document.createDocumentFragment();
     let fondoVideojuego, panelVideojuego, imagen, titulo, infoBasica;
@@ -143,14 +143,39 @@ function apagarOpcion(elegido) {
     elegido.style.background = "#1C1A20";
 }
 
+//Auxiliares
+
+function masBarato(a,b)
+{
+    let res;
+
+    if(a.precio > b.precio)
+    {
+        res = 1
+    }
+    else if(a.precio < b.precio)
+    {
+        res = -1;
+    }
+    else
+    {
+        res = 0;
+    }
+
+        return res;
+}
+
+
 //Main
-const videojuego = DB.videojuego;
+//INEFICIENTE:ESTOY HACIENDO UN SORT CADA VEZ QUE HAGO UNA CAMBIO DE ORDEN,DEBERIA TENER LOS ARREGLOS PRECREADOS
+//POR SEPARADO Y UNICAMENTE CAMBIAR EL INPUT A LOS METODOS DE MOSTRAR CATALOGO
+const videojuego = DB.videojuego.sort(masBarato);
 const select = document.querySelectorAll('ul.barraInfo');
 const opcion = document.querySelectorAll('li.barraInfo:not(#elegido)');
 const boton = document.querySelectorAll('button');
 let poscInicial = 0;
 
-poscInicial = mostrarCatalogo(poscInicial);
+poscInicial = mostrarCatalogo(videojuego,poscInicial);
 
 select.forEach(e => {
     e.addEventListener('click', () => desplegarMenu(e));
@@ -170,7 +195,7 @@ boton[0].addEventListener('click', () => {
     if(poscInicial != 8)
     {
         aux = eliminarCatalogo();
-        poscInicial = mostrarCatalogo(poscInicial-8-aux);
+        poscInicial = mostrarCatalogo(videojuego,poscInicial-8-aux);
     }
 });
 
@@ -178,7 +203,7 @@ boton[1].addEventListener('click', () => {
     if(poscInicial != videojuego.length)
     {
         eliminarCatalogo();
-        poscInicial = mostrarCatalogo(poscInicial);
+        poscInicial = mostrarCatalogo(videojuego,poscInicial);
     }
 
 });
