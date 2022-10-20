@@ -70,6 +70,11 @@ color: var(--main);
     align-items: center;
     padding: 2rem;
 }
+.header-title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
 
 .nav-link{
     text-decoration: none;
@@ -298,6 +303,16 @@ option:hover{
     .previous-link{
         text-align: center;
         font-size: 12px;
+        }
+    }
+    @media (max-width:660px){
+        .nav-container{
+            flex-direction: column;
+
+        }
+        .style-catalogo,.style-ranking{
+            padding-top: 2rem;
+            padding-left: 1rem;
         }
     }
 
