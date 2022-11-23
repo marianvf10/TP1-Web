@@ -22,61 +22,79 @@ Hacer cruz de search acorde a nuestra web(naranja)
 </head>
 
 <body>
+    <header> 
+        <!--PROBLEMA:no se prende la luz de la flecha-->
+        <a href="../ProximosEstrenos/ProximosEstrenos.html" id="previous-link">
+            <i class="ri-arrow-left-line icon">
+            </i>
+            <h2>Proximos estrenos</h2>
+        </a>
 
-    <!-- todo lo que se ve va dentro del body-->
-    <div class="container">
-        <div class="header">
-            <div class="previous-link">
-                <i class="ri-arrow-left-line icon"></i>
-                <a class="nav-link" href="../ProximosEstrenos/ProximosEstrenos.html">Proximos estrenos</a>
+        <!--PROBLEMA,SI PONGO H1 PIERDE EL HOVER-->
+        <a href="../Index/index.html" style="text-decoration:none"style="font-weight: 700"><h1>GameStore</h1></a>      
+        
+        <a class="nav-link" href="ProximosEstrenos.html" id="next-link">
+            <!--alguna forma menos mono de arreglar esto?-->
+            <h2> Ranking del mes</h2>
+            <i class="ri-arrow-right-line icon"></i>
+        </a>
 
-            </div>
-            <div class="title">
-                <a href="../Index/index.html" style="text-decoration:none">
-                    <h1 class="nav-link" style="font-weight: 700">GameStore</h1>
-                </a>
-            </div>
-            <div class="next-link">
-                <!--<a class="nav-link" href="ProximosEstrenos.html">Top Juegos Mes</a>-->
-                <i class="ri-arrow-right-line icon"></i>
+    </header>
 
-            </div>
+    <section class="bar-section">
+        <div class="bar-background">
+            <ul class="bar" style="z-index: 101;">
+                <li id="elegido" class="bar" style="display:block">De menor a mayor precio</li>
+                <li class="bar" style="display: none">De mayor a menor precio</li>
+                <li class="bar" style="display: none">De mas a menos antiguo</li>
+                <li class="bar" style="display: none">De menos a mas antiguo</li>
+            </ul>
         </div>
-        <article>
-            <div class="tab-name" style="z-index:100%;">
-                <div class="fondoBarraInfo">
-                    <ul class="barraInfo" style="z-index: 101;">
-                        <li id = "elegido" class="barraInfo" style="display:block">De menor a mayor precio</li>
-                        <li class="barraInfo" style="display: none">De mayor a menor precio</li>
-                        <li class="barraInfo" style="display: none">De mas a menos antiguo</li>
-                        <li class="barraInfo" style="display: none">De menos a mas antiguo</li>
-                    </ul>
-                </div>
+        <div class="bar-background">
+            <input type="search" placeholder="Busqueda" class="bar"></input>
+        </div>
+        <div class="bar-background">
+            <ul class="bar" style="z-index: 100;">
+                <li id="elegido" class="bar" style="display:block">Sin genero</li>
+                <li class="bar" style="display: none">Terror</li>
+                <li class="bar" style="display: none">Deportes</li>
+                <li class="bar" style="display: none">Multijugador</li>
+                <li class="bar" style="display: none">Accion</li>
+            </ul>
+        </div>
+    </section> 
+    
+    <section class="grid">
 
-                <div class="fondoBarraInfo">
-                    <input type="search" placeholder="Busqueda" class="barraInfo"></input>
-                </div>
+    </section>
+    <section class="bar-section">
+        <button style="direction: rtl;">Anterior</button>
+        <button style="direction: ltr">Siguiente</button>
+    </section>
 
-                <div class="fondoBarraInfo">
-                    <ul class="barraInfo" style="z-index: 100;">
-                        <li id = "elegido" class="barraInfo" style="display:block">Sin genero</li>
-                        <li class="barraInfo" style="display: none">Terror</option>
-                        <li class="barraInfo" style="display: none">Deportes</li>
-                        <li class="barraInfo" style="display: none">Multijugador</li>
-                        <li class="barraInfo" style="display: none">Accion</li>
-                    </ul>
-                </div>
-            </div>
+    <footer>
+        <p>
+            GameStore es el proyecto de la materia de Laboratorio de Programacion de Adriano Lusso y Mariano Vergara. <br>
+            Se busca emular un sitio web de venta de videojuegos, con varios servicios incluidos como gestor de proximos estrenos,
+            de ranking de mejores juego,etcetera. <br>
+            El objetivo es poner en practica los conocimientos adquiridos de HTML,CSS,JS y manejo JS.
+        </p>
 
-            <section class="grid">
-                
-            </section>
-            <section class="tab-name"> 
-                <button style="direction: rtl;">Anterior</button>
-                <button style="direction: ltr">Siguiente</button>
-            </section>
-        </article>
-    </div>
+        <a href="https://www.facebook.com/Steam" target="_blank">
+            <img src="../Iconos/facebookIcono.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/steam_games_official/?hl=es" target="_blank">
+            <img src="../Iconos/instagramIcono.png" alt="">
+        </a>
+        <a href="https://twitter.com/Steam?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+            <img src="../Iconos/twitterIcono.png" alt="">
+        </a>
+
+        <a href="https://store.steampowered.com/privacy_agreement/?snr=1_44_44_" target="_blank">Politicas de privacidad<a href=""></a>
+        <a href="https://store.steampowered.com/legal/?snr=1_44_44_" target="_blank">Informacion legal</a>
+        <a href="https://store.steampowered.com/steam_refunds/?snr=1_44_44_" target="_blank">Reembolsos</a>
+        <a href="https://store.steampowered.com/account/cookiepreferences/?snr=1_44_44_" target="_blank">Cookies</a>
+    </footer>
 
 </body>
 

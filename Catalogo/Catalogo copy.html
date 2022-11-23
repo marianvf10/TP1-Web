@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--A solucionar:
+Errores en responsive de busqueda:Achica la pantalla y abri los seleccionadores,se vera que quedan ocultas las opcines
+ atras de la busqueda
+
+Hacer reborde de los seleccionadores
+
+Hacer cruz de search acorde a nuestra web(naranja)
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link rel="stylesheet" href="CatalogoStyles copy.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- aca irian librerrias de fronted o iconos-->
+</head>
+
+<body>
+
+    <!-- todo lo que se ve va dentro del body-->
+    <div class="container">
+        <div class="header">
+            <div class="previous-link">
+                <i class="ri-arrow-left-line icon"></i>
+                <a class="nav-link" href="../ProximosEstrenos/ProximosEstrenos.html">Proximos estrenos</a>
+
+            </div>
+            <div class="title">
+                <a href="../Index/index.html" style="text-decoration:none">
+                    <h1 class="nav-link" style="font-weight: 700">GameStore</h1>
+                </a>
+            </div>
+            <div class="next-link">
+                <a class="nav-link" href="ProximosEstrenos.html">Top Juegos Mes</a>
+                <i class="ri-arrow-right-line icon"></i>
+
+            </div>
+        </div>
+        <article>
+            <div class="tab-name" style="z-index:100%;">
+                <div class="fondoBarraInfo">
+                    <ul class="barraInfo" style="z-index: 101;">
+                        <li id = "elegido" class="barraInfo" style="display:block">De menor a mayor precio</li>
+                        <li class="barraInfo" style="display: none">De mayor a menor precio</li>
+                        <li class="barraInfo" style="display: none">De mas a menos antiguo</li>
+                        <li class="barraInfo" style="display: none">De menos a mas antiguo</li>
+                    </ul>
+                </div>
+
+                <div class="fondoBarraInfo">
+                    <input type="search" placeholder="Busqueda" class="barraInfo"></input>
+                </div>
+
+                <div class="fondoBarraInfo">
+                    <ul class="barraInfo" style="z-index: 100;">
+                        <li id = "elegido" class="barraInfo" style="display:block">Sin genero</li>
+                        <li class="barraInfo" style="display: none">Terror</option>
+                        <li class="barraInfo" style="display: none">Deportes</li>
+                        <li class="barraInfo" style="display: none">Multijugador</li>
+                        <li class="barraInfo" style="display: none">Accion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="grid">
+                
+            </section>
+            <section class="tab-name"> 
+                <button style="direction: rtl;">Anterior</button>
+                <button style="direction: ltr">Siguiente</button>
+            </section>
+        </article>
+    </div>
+
+</body>
+
+<script type="module" src="CatalogoCodigo.js"></script>
+
+</html>

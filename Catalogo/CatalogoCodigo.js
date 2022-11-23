@@ -1,27 +1,27 @@
 import DB from '../DB.json' assert {type: 'json'};
 
 //Metodos para mostrar el catalogo
-function generarFondoVideojuego() {
-    let fondoVideojuego;
-    fondoVideojuego = document.createElement('ul');
-    fondoVideojuego.setAttribute('class', 'fondoVideojuego');
+function generarBordeVideojuego() {
+    let bordeVideojuego;
+    bordeVideojuego = document.createElement('ul');
+    bordeVideojuego.setAttribute('class', 'videogame-border');
 
-    return fondoVideojuego;
+    return bordeVideojuego;
 }
 
-function generarPanelVideojuego() {
-    let panelVideojuego;
-    panelVideojuego = document.createElement('li');
-    panelVideojuego.setAttribute('class', 'videojuego');
+function generarFondoVideojuego() {
+    let fondoVideojuego;
+    fondoVideojuego = document.createElement('li');
+    fondoVideojuego.setAttribute('class', 'videogame-background');
 
-    return panelVideojuego;
+    return fondoVideojuego;
 }
 
 function generarImagen(posc) {
     let imagen;
     imagen = document.createElement('img');
     imagen.setAttribute('src', videojuego[posc].imagen);
-    imagen.setAttribute('class', 'imagenVideojuego');
+    imagen.setAttribute('class', 'videogame-img');
 
     return imagen;
 }
@@ -51,22 +51,22 @@ function generarInfoBasica(posc) {
 function mostrarCatalogo(catalogo,posc) {
     let planilla = document.querySelector('.grid');
     let fragmento = document.createDocumentFragment();
-    let fondoVideojuego, panelVideojuego, imagen, titulo, infoBasica;
+    let bordeVideojuego, fondoVideojuego, imagen, titulo, infoBasica;
     let itr = 0;
 
     while (posc < videojuego.length && itr < 8) {
+        bordeVideojuego = generarBordeVideojuego();
         fondoVideojuego = generarFondoVideojuego();
-        panelVideojuego = generarPanelVideojuego();
         imagen = generarImagen(posc);
         titulo = generarTitulo(posc);
         infoBasica = generarInfoBasica(posc);
 
-        fondoVideojuego.appendChild(panelVideojuego);
-        panelVideojuego.appendChild(imagen);
-        panelVideojuego.appendChild(titulo);
-        panelVideojuego.appendChild(infoBasica);
+        bordeVideojuego.appendChild(fondoVideojuego);
+        fondoVideojuego.appendChild(imagen);
+        fondoVideojuego.appendChild(titulo);
+        fondoVideojuego.appendChild(infoBasica);
 
-        fragmento.appendChild(fondoVideojuego);
+        fragmento.appendChild(bordeVideojuego);
 
         posc++;
         itr++;
