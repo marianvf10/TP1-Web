@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--A solucionar:
+Errores en responsive de busqueda:Achica la pantalla y abri los seleccionadores,se vera que quedan ocultas las opcines
+ atras de la busqueda
+
+Hacer reborde de los seleccionadores
+
+Hacer cruz de search acorde a nuestra web(naranja)
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link rel="stylesheet" href="CargaJuegoStyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- aca irian librerrias de fronted o iconos-->
+</head>
+
+<body>
+
+    <!-- todo lo que se ve va dentro del body-->
+    <div class="container">
+        <div class="header">
+            <div class="previous-link">
+                <i class="ri-arrow-left-line icon"></i>
+                <a class="nav-link" href="../ProximosEstrenos/ProximosEstrenos.html">Proximos estrenos</a>
+
+            </div>
+            <div class="title">
+                <a href="../Index/index.html" style="text-decoration:none">
+                    <h1 class="nav-link" style="font-weight: 700">GameStore</h1>
+                </a>
+            </div>
+            <div class="next-link">
+                <!--<a class="nav-link" href="ProximosEstrenos.html">Top Juegos Mes</a>-->
+                <i class="ri-arrow-right-line icon"></i>
+
+            </div>
+        </div>
+        <article>
+            <div class="tab-name" style="z-index:100%;">
+                <h2>Carga de videojuegos</h2>
+            </div>
+
+            <form action="">
+                <br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre"><br><br>
+                <label for="consola">Consola:</label>
+                <select name="consola" id="consola">
+                    <option value="1">PC</option>
+                    <option value="2">Xbox One</option>
+                    <option value="3">PS4</option>
+                </select> <br><br>
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" id="precio" min="1">  <br><br> 
+                <label for="genero">Genero:</label>
+                <label><input type="checkbox" name="genero1" id="genero1">Accion</label> 
+                <label><input type="checkbox" name="genero2" id="genero2">Terror</label>            
+                <label><input type="checkbox" name="genero3" id="genero3">Deporte</label>            
+                <label><input type="checkbox" name="genero4" id="genero4">Multijugador</label> <br> <br>
+                <label for="estreno">Estreno:</label>     
+                <input type="date" name="estreno" id="estreno"> <br> <br>
+                <label for="descripcion">Descripcion:</label>
+                <textarea name="descripcion" id="descripcion" cols="60" rows="10"></textarea> <br><br>
+                <label for="imagen">Imagen:</label>
+                <input type="file" name="imagen" id="imagen">  <br> <br>
+                <input type="submit" name="submit" id="submit" style="weigth:30px">  <br><br>   
+            </form>
+        </article>
+    </div>
+
+</body>
+
+</html>
